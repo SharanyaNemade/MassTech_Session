@@ -36,6 +36,7 @@ namespace Auth
             {
                 while (rdr.Read())
                 {
+
                     Session["ActivateUser"] = rdr["username"];
 
                     if ((rdr["email"].Equals(user) || rdr["username"].Equals(user)) && rdr["password"].Equals(pass) && rdr["role"].Equals("Admin"))
